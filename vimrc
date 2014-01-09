@@ -68,7 +68,7 @@ set wildignore+=*.jpg,*.png,*.tiff
 
 set visualbell      " no beep but visual bell
 set cursorline      " Highlight the screen line of the cursor
-set cursorcolumn      " Highlight the screen column of the cursor
+"set cursorcolumn      " Highlight the screen column of the cursor
 set ttyfast         " Indicates a fast terminal connection.
 set ruler           " Show the line and column number of the cursor position
 set laststatus=2    " = always
@@ -119,19 +119,19 @@ endif
 
 
 "{{{ 7.3 features
-if v:version >= 703
+"if v:version >= 703
     " Show the line number relative to the line with the cursor
-    set relativenumber
+"    set relativenumber
     " toggle numbers (e.g. for copy and paste to another window)
-    nmap <leader>tn :set relativenumber!<CR>
+"    nmap <leader>tn :set relativenumber!<CR>
 
     set undofile        " new feature of undo files
     set undodir=$HOME/.vim/undos
 
-    set colorcolumn=85
-endif
+"    set colorcolumn=85
+"endif
 "}}} v:version >= 703
-
+set number
 " no more backupfiles in the same directory
 set backupdir=$HOME/.vim/backups
 
@@ -156,8 +156,8 @@ set formatoptions=qrn1
 
 " show invisible chars (*t*oggle *l*ist)
 nmap <leader>tl :set list!<CR>
-set list
-set listchars=nbsp:•,tab:▸\ ,eol:¬,trail:·,extends:↷,precedes:↶
+"set list
+"set listchars=nbsp:•,tab:▸\ ,eol:¬,trail:·,extends:↷,precedes:↶
 
 " Stifle many interruptive "Hit Enter" prompts
 set shortmess=atI
@@ -192,8 +192,8 @@ set t_Co=256
 set background=dark
 "set background=light
 
-"let g:solarized_termcolors=16
-let g:solarized_termcolors=256
+let g:solarized_termcolors=16
+"let g:solarized_termcolors=256
 "let g:solarized_visibility="high"
 colorscheme solarized
 "autocmd FileType mail colorscheme transparent
@@ -546,4 +546,4 @@ augroup encrypted
 augroup END
 
 " source my private vimrc
-source $HOME/.vim/vimrc.private
+" source $HOME/.vim/vimrc.private
